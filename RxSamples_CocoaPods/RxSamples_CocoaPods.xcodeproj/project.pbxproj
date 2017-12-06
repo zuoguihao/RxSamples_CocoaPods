@@ -15,6 +15,12 @@
 		310288A81FD68EA800FACDAF /* SelectPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */; };
 		310288AA1FD68F2A00FACDAF /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */; };
 		310288AC1FD6908400FACDAF /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288AB1FD6908400FACDAF /* PaymentModel.swift */; };
+		318B3C6F1FD7824900428ADF /* PushSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3C6E1FD7824900428ADF /* PushSettingViewController.swift */; };
+		318B3C711FD7828F00428ADF /* SelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3C701FD7828F00428ADF /* SelectTableViewCell.swift */; };
+		318B3C731FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3C721FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift */; };
+		318B3C751FD7858C00428ADF /* PushSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3C741FD7858C00428ADF /* PushSettingModel.swift */; };
+		318B3C771FD7863F00428ADF /* PushSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3C761FD7863F00428ADF /* PushSettingViewModel.swift */; };
+		318B3D551FD7A43100428ADF /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318B3D541FD7A43100428ADF /* UIButton+Rx.swift */; };
 		31B8761C1FD639FD0062C39A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B8761B1FD639FD0062C39A /* AppDelegate.swift */; };
 		31B8761E1FD639FD0062C39A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B8761D1FD639FD0062C39A /* ViewController.swift */; };
 		31B876211FD639FD0062C39A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B8761F1FD639FD0062C39A /* Main.storyboard */; };
@@ -40,6 +46,12 @@
 		310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentViewController.swift; sourceTree = "<group>"; };
 		310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		310288AB1FD6908400FACDAF /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		318B3C6E1FD7824900428ADF /* PushSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingViewController.swift; sourceTree = "<group>"; };
+		318B3C701FD7828F00428ADF /* SelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewCell.swift; sourceTree = "<group>"; };
+		318B3C721FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		318B3C741FD7858C00428ADF /* PushSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingModel.swift; sourceTree = "<group>"; };
+		318B3C761FD7863F00428ADF /* PushSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingViewModel.swift; sourceTree = "<group>"; };
+		318B3D541FD7A43100428ADF /* UIButton+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		31B876181FD639FD0062C39A /* RxSamples_CocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSamples_CocoaPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B8761B1FD639FD0062C39A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31B8761D1FD639FD0062C39A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +95,11 @@
 		310288991FD67F3C00FACDAF /* PushSetting */ = {
 			isa = PBXGroup;
 			children = (
+				318B3C6E1FD7824900428ADF /* PushSettingViewController.swift */,
+				318B3C701FD7828F00428ADF /* SelectTableViewCell.swift */,
+				318B3C721FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift */,
+				318B3C741FD7858C00428ADF /* PushSettingModel.swift */,
+				318B3C761FD7863F00428ADF /* PushSettingViewModel.swift */,
 			);
 			path = PushSetting;
 			sourceTree = "<group>";
@@ -103,6 +120,7 @@
 				3102889F1FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift */,
 				310288A01FD681B800FACDAF /* RxSwift+DSUIControl.swift */,
 				310288A51FD6820600FACDAF /* RxSwift+DSOperators.swift */,
+				318B3D541FD7A43100428ADF /* UIButton+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,8 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318B3C771FD7863F00428ADF /* PushSettingViewModel.swift in Sources */,
+				318B3C751FD7858C00428ADF /* PushSettingModel.swift in Sources */,
 				310288AC1FD6908400FACDAF /* PaymentModel.swift in Sources */,
+				318B3D551FD7A43100428ADF /* UIButton+Rx.swift in Sources */,
 				310288A61FD6820600FACDAF /* RxSwift+DSOperators.swift in Sources */,
+				318B3C731FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift in Sources */,
 				310288AA1FD68F2A00FACDAF /* PaymentTableViewCell.swift in Sources */,
 				310288A81FD68EA800FACDAF /* SelectPaymentViewController.swift in Sources */,
 				31B876341FD63A480062C39A /* AppDelegate.swift in Sources */,
@@ -399,8 +421,10 @@
 				310288A31FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift in Sources */,
 				310288A41FD681B800FACDAF /* RxSwift+DSUIControl.swift in Sources */,
 				31B876BC1FD6430F0062C39A /* ProductTableViewCell.swift in Sources */,
+				318B3C6F1FD7824900428ADF /* PushSettingViewController.swift in Sources */,
 				31B876B81FD642D20062C39A /* ShipmentDealViewController.swift in Sources */,
 				31B876BA1FD642F90062C39A /* ProductInfoModel.swift in Sources */,
+				318B3C711FD7828F00428ADF /* SelectTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

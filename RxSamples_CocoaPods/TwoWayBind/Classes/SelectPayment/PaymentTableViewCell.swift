@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class PaymentTableViewCell: UITableViewCell {
 
     // MARK: - Property
+    /// 重用 ID
+    static let reuseID = "PaymentTableViewCellID"
     /// 左侧支付 icon
     @IBOutlet weak var iconIV: UIImageView!
     /// 支付名称
@@ -18,6 +21,7 @@ class PaymentTableViewCell: UITableViewCell {
     /// 选择按钮
     @IBOutlet weak var selectBtn: UIButton!
     
+    let bag = DisposeBag()
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -26,5 +30,9 @@ class PaymentTableViewCell: UITableViewCell {
     }
     
     // MARK: - Public Method
+    func showData(model: PaymentEnum) {
+        iconIV.image = model.icon
+        nameLabel.text = model.name
+    }
 
 }

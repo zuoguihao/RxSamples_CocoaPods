@@ -17,12 +17,21 @@ class SelectPaymentViewController: UIViewController {
     @IBOutlet weak var baseTableView: UITableView! {
         didSet {
             baseTableView.rx.enableAutoDeselect().disposed(by: bag)
+            baseTableView.tableFooterView = UIView()
         }
     }
     private typealias mySectionModel = SectionModel<PaymentModel, PaymentEnum>
     /// 数据源
     private let dataSource = RxTableViewSectionedReloadDataSource<mySectionModel>(configureCell: { (model, tableView, indexPath, paymentEnum) in
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentTableViewCellID", for: indexPath) as! PaymentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PaymentTableViewCell.reuseID, for: indexPath) as! PaymentTableViewCell
+        
+        cell.showData(model: paymentEnum)
+        
+        let selected = model[indexPath.section].model.selectedType.asObservable()
+        
+        selected.map { $0 == paymentEnum }
+            .bind(to: cell.selectBtn.rx.isSelected)
+            .disposed(by: cell.bag)
         
         return cell
     })

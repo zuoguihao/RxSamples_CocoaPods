@@ -1,5 +1,5 @@
 //
-//  RxSwift+DSAutoDeselect.swift
+//  AutoDeselect+Rx.swift
 //  TwoWayBind
 //
 //  Created by 左得胜 on 2017/12/5.

@@ -1,5 +1,5 @@
 //
-//  RxSwift+DSUIControl.swift
+//  UIControl+Rx.swift
 //  RxSamples_CocoaPods
 //
 //  Created by 左得胜 on 2017/12/5.

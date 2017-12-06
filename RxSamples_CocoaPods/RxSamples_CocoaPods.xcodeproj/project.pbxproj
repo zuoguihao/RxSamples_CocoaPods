@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		310288A11FD681B800FACDAF /* UIColor+DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102889D1FD681B800FACDAF /* UIColor+DS.swift */; };
-		310288A21FD681B800FACDAF /* RxSwift+DSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102889E1FD681B800FACDAF /* RxSwift+DSUIView.swift */; };
-		310288A31FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102889F1FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift */; };
-		310288A41FD681B800FACDAF /* RxSwift+DSUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A01FD681B800FACDAF /* RxSwift+DSUIControl.swift */; };
-		310288A61FD6820600FACDAF /* RxSwift+DSOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A51FD6820600FACDAF /* RxSwift+DSOperators.swift */; };
+		310288A21FD681B800FACDAF /* UIView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102889E1FD681B800FACDAF /* UIView+Rx.swift */; };
+		310288A31FD681B800FACDAF /* AutoDeselect+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3102889F1FD681B800FACDAF /* AutoDeselect+Rx.swift */; };
+		310288A41FD681B800FACDAF /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A01FD681B800FACDAF /* UIControl+Rx.swift */; };
+		310288A61FD6820600FACDAF /* Operators+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A51FD6820600FACDAF /* Operators+Rx.swift */; };
 		310288A81FD68EA800FACDAF /* SelectPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */; };
 		310288AA1FD68F2A00FACDAF /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */; };
 		310288AC1FD6908400FACDAF /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288AB1FD6908400FACDAF /* PaymentModel.swift */; };
@@ -39,10 +39,10 @@
 /* Begin PBXFileReference section */
 		0EE5B8E3149C67B5FF5BD01C /* Pods-TwoWayBind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoWayBind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoWayBind/Pods-TwoWayBind.debug.xcconfig"; sourceTree = "<group>"; };
 		3102889D1FD681B800FACDAF /* UIColor+DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DS.swift"; sourceTree = "<group>"; };
-		3102889E1FD681B800FACDAF /* RxSwift+DSUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+DSUIView.swift"; sourceTree = "<group>"; };
-		3102889F1FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+DSAutoDeselect.swift"; sourceTree = "<group>"; };
-		310288A01FD681B800FACDAF /* RxSwift+DSUIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+DSUIControl.swift"; sourceTree = "<group>"; };
-		310288A51FD6820600FACDAF /* RxSwift+DSOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+DSOperators.swift"; sourceTree = "<group>"; };
+		3102889E1FD681B800FACDAF /* UIView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rx.swift"; sourceTree = "<group>"; };
+		3102889F1FD681B800FACDAF /* AutoDeselect+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AutoDeselect+Rx.swift"; sourceTree = "<group>"; };
+		310288A01FD681B800FACDAF /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
+		310288A51FD6820600FACDAF /* Operators+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Rx.swift"; sourceTree = "<group>"; };
 		310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentViewController.swift; sourceTree = "<group>"; };
 		310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		310288AB1FD6908400FACDAF /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
@@ -116,10 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				3102889D1FD681B800FACDAF /* UIColor+DS.swift */,
-				3102889E1FD681B800FACDAF /* RxSwift+DSUIView.swift */,
-				3102889F1FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift */,
-				310288A01FD681B800FACDAF /* RxSwift+DSUIControl.swift */,
-				310288A51FD6820600FACDAF /* RxSwift+DSOperators.swift */,
+				3102889E1FD681B800FACDAF /* UIView+Rx.swift */,
+				3102889F1FD681B800FACDAF /* AutoDeselect+Rx.swift */,
+				310288A01FD681B800FACDAF /* UIControl+Rx.swift */,
+				310288A51FD6820600FACDAF /* Operators+Rx.swift */,
 				318B3D541FD7A43100428ADF /* UIButton+Rx.swift */,
 			);
 			path = Extensions;
@@ -411,15 +411,15 @@
 				318B3C751FD7858C00428ADF /* PushSettingModel.swift in Sources */,
 				310288AC1FD6908400FACDAF /* PaymentModel.swift in Sources */,
 				318B3D551FD7A43100428ADF /* UIButton+Rx.swift in Sources */,
-				310288A61FD6820600FACDAF /* RxSwift+DSOperators.swift in Sources */,
+				310288A61FD6820600FACDAF /* Operators+Rx.swift in Sources */,
 				318B3C731FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift in Sources */,
 				310288AA1FD68F2A00FACDAF /* PaymentTableViewCell.swift in Sources */,
 				310288A81FD68EA800FACDAF /* SelectPaymentViewController.swift in Sources */,
 				31B876341FD63A480062C39A /* AppDelegate.swift in Sources */,
-				310288A21FD681B800FACDAF /* RxSwift+DSUIView.swift in Sources */,
+				310288A21FD681B800FACDAF /* UIView+Rx.swift in Sources */,
 				310288A11FD681B800FACDAF /* UIColor+DS.swift in Sources */,
-				310288A31FD681B800FACDAF /* RxSwift+DSAutoDeselect.swift in Sources */,
-				310288A41FD681B800FACDAF /* RxSwift+DSUIControl.swift in Sources */,
+				310288A31FD681B800FACDAF /* AutoDeselect+Rx.swift in Sources */,
+				310288A41FD681B800FACDAF /* UIControl+Rx.swift in Sources */,
 				31B876BC1FD6430F0062C39A /* ProductTableViewCell.swift in Sources */,
 				318B3C6F1FD7824900428ADF /* PushSettingViewController.swift in Sources */,
 				31B876B81FD642D20062C39A /* ShipmentDealViewController.swift in Sources */,

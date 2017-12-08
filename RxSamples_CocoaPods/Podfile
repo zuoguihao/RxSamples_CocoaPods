@@ -1,7 +1,7 @@
 platform :ios, '8.0'
 use_frameworks!
 
-targetTetsArray = ['TwoWayBind']
+targetTetsArray = ['TwoWayBind', 'Stopwatch']
 
 targetTetsArray.each do |t|
     target t do

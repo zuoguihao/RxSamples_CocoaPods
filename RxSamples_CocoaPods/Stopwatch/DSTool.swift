@@ -20,8 +20,10 @@ struct DSStyle {
 }
 
 struct DSTool {
+    static let form = DateFormatter()
+    
     static let convertToTimeInfo: (TimeInterval) -> String = { ms in
-        var form = DateFormatter()
+        
         form.dateFormat = "mm:ss.SS"
         let date = Date(timeIntervalSince1970: ms)
         

@@ -20,6 +20,10 @@ struct BasicViewModel: StopwatchViewModelProtocol {
     var displayElements: Observable<[(title: Observable<String>, displayTime: Observable<String>, color: Observable<UIColor>)]>
     
     // MARK: - CuctomProperty
+    /// 秒表状态
+    ///
+    /// - timing: 正在计时
+    /// - stopped: 已经停止
     private enum State {
         case timing, stopped
     }

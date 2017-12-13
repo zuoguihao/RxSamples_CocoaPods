@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var baseTableView: UITableView! {
         didSet {
             baseTableView.rx.enableAutoDeselect().disposed(by: bag)
+            baseTableView.tableFooterView = UIView()
         }
     }
     let bag = DisposeBag()
@@ -40,10 +41,11 @@ class HomeViewController: UIViewController {
 private extension HomeViewController {
     private func setupUI() {
         let items = Observable.just([
-            HomeItemModel(title: "Basic", type: BasicViewModel.self)
+            HomeItemModel(title: "Basic", type: BasicViewModel.self),
+            HomeItemModel(title: "Timing", type: TimingViewModel.self),
             ])
         
-        let baseTableView = UITableView()
+//        let baseTableView = UITableView()
         
         items
             .bind(to: baseTableView.rx.items(cellIdentifier: "HomeTableViewCellID")) { (index, element, cell) in
@@ -53,8 +55,9 @@ private extension HomeViewController {
         
         baseTableView.rx.modelSelected(HomeItemModel.self)
             .subscribe(onNext: { [weak self] (model) in
-                let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailViewControllerID") as! DetailViewController
-//                detailVC
+                let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewControllerID") as! DetailViewController
+                detailVC.type = model.type
+                detailVC.title = model.title
                 self?.show(detailVC, sender: nil)
                 
             })

@@ -10,14 +10,6 @@ import Foundation
 import RxSwift
 
 struct TimingViewModel: StopwatchViewModelProtocol {
-    var startAStopStyle: Observable<DSStyle.Button>
-    
-    var resetALapStyle: Observable<DSStyle.Button>
-    
-    var displayTime: Observable<String>
-    
-    var displayElements: Observable<[(title: Observable<String>, displayTime: Observable<String>, color: Observable<UIColor>)]>
-    
     // MARK: - Custom Property
     private enum State {
         case timing, stopped, reseted
@@ -30,6 +22,15 @@ struct TimingViewModel: StopwatchViewModelProtocol {
     private let automation: Automaton<State, Input>
     
     private let bag = DisposeBag()
+    
+    // MARK: - LifeCycle
+    var startAStopStyle: Observable<DSStyle.Button>
+    
+    var resetALapStyle: Observable<DSStyle.Button>
+    
+    var displayTime: Observable<String>
+    
+    var displayElements: Observable<[(title: Observable<String>, displayTime: Observable<String>, color: Observable<UIColor>)]>
     
     init(input: (startAStopTrigger: Observable<Void>, resetALapTrigger: Observable<Void>)) {
         let startTrigger = input.startAStopTrigger.share(replay: 1)

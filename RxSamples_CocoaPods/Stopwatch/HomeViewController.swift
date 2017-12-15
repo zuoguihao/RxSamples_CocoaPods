@@ -43,6 +43,7 @@ private extension HomeViewController {
         let items = Observable.just([
             HomeItemModel(title: "Basic", type: BasicViewModel.self),
             HomeItemModel(title: "Timing", type: TimingViewModel.self),
+            HomeItemModel(title: "Final", type: FinalViewModel.self)
             ])
         
 //        let baseTableView = UITableView()

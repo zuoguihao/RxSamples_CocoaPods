@@ -11,14 +11,6 @@ import RxSwift
 
 struct BasicViewModel: StopwatchViewModelProtocol {
     
-    var startAStopStyle: Observable<DSStyle.Button>
-    
-    var resetALapStyle: Observable<DSStyle.Button>
-    
-    var displayTime: Observable<String>
-    
-    var displayElements: Observable<[(title: Observable<String>, displayTime: Observable<String>, color: Observable<UIColor>)]>
-    
     // MARK: - CuctomProperty
     /// 秒表状态
     ///
@@ -27,6 +19,15 @@ struct BasicViewModel: StopwatchViewModelProtocol {
     private enum State {
         case timing, stopped
     }
+    
+    // MARK: - LifeCycle
+    var startAStopStyle: Observable<DSStyle.Button>
+    
+    var resetALapStyle: Observable<DSStyle.Button>
+    
+    var displayTime: Observable<String>
+    
+    var displayElements: Observable<[(title: Observable<String>, displayTime: Observable<String>, color: Observable<UIColor>)]>
     
     init(input: (startAStopTrigger: Observable<Void>, resetALapTrigger: Observable<Void>)) {
         let state = input.startAStopTrigger

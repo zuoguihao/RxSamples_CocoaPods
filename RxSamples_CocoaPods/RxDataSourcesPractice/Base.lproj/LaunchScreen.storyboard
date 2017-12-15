@@ -14,25 +14,27 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yud-H8-Uv3"/>
-                        <viewControllerLayoutGuide type="bottom" id="RY9-AB-O3V"/>
+                        <viewControllerLayoutGuide type="top" id="Hu5-6i-bYV"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Jq-Gi-Yhc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计时器练习" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2q-Kt-2zt">
-                                <rect key="frame" x="15" y="323" width="345" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC2-2U-uvW">
+                                <rect key="frame" x="15" y="308" width="345" height="50.5"/>
+                                <string key="text">RxDataSources
+Example</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="r2q-Kt-2zt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="15" id="1tJ-c7-pin"/>
-                            <constraint firstItem="r2q-Kt-2zt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AbS-rn-GLI"/>
-                            <constraint firstAttribute="trailing" secondItem="r2q-Kt-2zt" secondAttribute="trailing" constant="15" id="wzz-gP-7OR"/>
+                            <constraint firstItem="OC2-2U-uvW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="15" id="5Wr-sM-m6n"/>
+                            <constraint firstAttribute="trailing" secondItem="OC2-2U-uvW" secondAttribute="trailing" constant="15" id="IKP-3T-JMt"/>
+                            <constraint firstItem="OC2-2U-uvW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="c9i-1a-WwI"/>
                         </constraints>
                     </view>
                 </viewController>

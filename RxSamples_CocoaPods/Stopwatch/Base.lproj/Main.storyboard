@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gQc-W7-Y4k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gQc-W7-Y4k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,6 +20,10 @@
         <scene sceneID="Pv7-Uz-omi">
             <objects>
                 <viewController id="KGM-in-0xX" customClass="HomeViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Leb-Hh-Chi"/>
+                        <viewControllerLayoutGuide type="bottom" id="0wM-Tp-NdX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GWN-XI-tyu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,11 +58,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="e1F-fH-34W" firstAttribute="top" secondItem="GWN-XI-tyu" secondAttribute="top" id="OcS-dt-Wb3"/>
-                            <constraint firstItem="hmM-Rn-ZFq" firstAttribute="trailing" secondItem="e1F-fH-34W" secondAttribute="trailing" id="f4x-ly-pME"/>
-                            <constraint firstItem="e1F-fH-34W" firstAttribute="leading" secondItem="hmM-Rn-ZFq" secondAttribute="leading" id="oV2-pC-LSO"/>
-                            <constraint firstItem="hmM-Rn-ZFq" firstAttribute="bottom" secondItem="e1F-fH-34W" secondAttribute="bottom" id="rBy-45-If3"/>
+                            <constraint firstAttribute="trailing" secondItem="e1F-fH-34W" secondAttribute="trailing" id="f4x-ly-pME"/>
+                            <constraint firstItem="e1F-fH-34W" firstAttribute="leading" secondItem="GWN-XI-tyu" secondAttribute="leading" id="oV2-pC-LSO"/>
+                            <constraint firstItem="0wM-Tp-NdX" firstAttribute="top" secondItem="e1F-fH-34W" secondAttribute="bottom" id="rBy-45-If3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hmM-Rn-ZFq"/>
                     </view>
                     <navigationItem key="navigationItem" title="计时器" id="Ldi-Uh-muX"/>
                     <connections>
@@ -91,6 +94,10 @@
         <scene sceneID="9MJ-78-PjK">
             <objects>
                 <viewController storyboardIdentifier="DetailViewControllerID" id="FbT-28-MW5" customClass="DetailViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Te2-SK-zsv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yU3-aU-3vL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hu3-2D-ANk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,19 +172,18 @@
                         <constraints>
                             <constraint firstItem="kpU-4r-Y4I" firstAttribute="leading" secondItem="hu3-2D-ANk" secondAttribute="leading" constant="275" id="1yY-D8-6H6"/>
                             <constraint firstItem="kpU-4r-Y4I" firstAttribute="top" secondItem="CLh-jX-7kJ" secondAttribute="bottom" constant="100" id="LF8-uc-rhv"/>
-                            <constraint firstItem="h12-d1-cyA" firstAttribute="bottom" secondItem="FMu-4V-jX5" secondAttribute="bottom" id="MUW-sr-KBr"/>
-                            <constraint firstItem="CLh-jX-7kJ" firstAttribute="top" secondItem="FMu-4V-jX5" secondAttribute="top" constant="80" id="Njg-Ni-tXX"/>
+                            <constraint firstItem="h12-d1-cyA" firstAttribute="bottom" secondItem="yU3-aU-3vL" secondAttribute="top" id="MUW-sr-KBr"/>
+                            <constraint firstItem="CLh-jX-7kJ" firstAttribute="top" secondItem="Te2-SK-zsv" secondAttribute="bottom" constant="80" id="Njg-Ni-tXX"/>
                             <constraint firstItem="qeB-hZ-el4" firstAttribute="leading" secondItem="CLh-jX-7kJ" secondAttribute="leading" id="O14-lN-2cn"/>
                             <constraint firstItem="h12-d1-cyA" firstAttribute="top" secondItem="kpU-4r-Y4I" secondAttribute="bottom" constant="8" id="O5F-ad-dBH"/>
                             <constraint firstItem="kpU-4r-Y4I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CLh-jX-7kJ" secondAttribute="trailing" id="PPt-8H-Buf"/>
-                            <constraint firstItem="h12-d1-cyA" firstAttribute="trailing" secondItem="FMu-4V-jX5" secondAttribute="trailing" id="TJu-bF-3Tq"/>
-                            <constraint firstItem="h12-d1-cyA" firstAttribute="leading" secondItem="FMu-4V-jX5" secondAttribute="leading" id="ezc-3b-e2M"/>
-                            <constraint firstItem="FMu-4V-jX5" firstAttribute="trailing" secondItem="CLh-jX-7kJ" secondAttribute="trailing" constant="15" id="i04-zj-fU0"/>
+                            <constraint firstItem="h12-d1-cyA" firstAttribute="trailing" secondItem="hu3-2D-ANk" secondAttribute="trailing" id="TJu-bF-3Tq"/>
+                            <constraint firstItem="h12-d1-cyA" firstAttribute="leading" secondItem="hu3-2D-ANk" secondAttribute="leading" id="ezc-3b-e2M"/>
+                            <constraint firstAttribute="trailing" secondItem="CLh-jX-7kJ" secondAttribute="trailing" constant="15" id="i04-zj-fU0"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qeB-hZ-el4" secondAttribute="trailing" constant="20" symbolic="YES" id="jX6-5w-LP4"/>
-                            <constraint firstItem="CLh-jX-7kJ" firstAttribute="leading" secondItem="FMu-4V-jX5" secondAttribute="leading" constant="15" id="tr7-9m-qZo"/>
+                            <constraint firstItem="CLh-jX-7kJ" firstAttribute="leading" secondItem="hu3-2D-ANk" secondAttribute="leading" constant="15" id="tr7-9m-qZo"/>
                             <constraint firstItem="qeB-hZ-el4" firstAttribute="top" secondItem="CLh-jX-7kJ" secondAttribute="bottom" constant="100" id="wLb-L1-cOf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FMu-4V-jX5"/>
                     </view>
                     <navigationItem key="navigationItem" title="秒表" id="xW7-R6-6bZ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>

@@ -1,8 +1,8 @@
 //
-//  CollectionExapmleViewController.swift
-//  RxDataSourcesPractice
+//  DetailViewController.swift
+//  DataSourceTest
 //
-//  Created by 左得胜 on 2017/12/15.
+//  Created by 左得胜 on 2017/12/22.
 //  Copyright © 2017年 左得胜. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-class CollectionExapmleViewController: UIViewController {
+class DetailViewController: UIViewController {
 
-    // Property
-    @IBOutlet private weak var myCollectionView: UICollectionView!
-    /// 编辑 item
-    @IBOutlet private weak var editItem: UIBarButtonItem!
+    // MARK: - Property
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    @IBOutlet weak var myEditItem: UIBarButtonItem!
     
+
     /// 导航栏 title 枚举
     private enum ItemState {
         case editting
@@ -56,63 +56,56 @@ class CollectionExapmleViewController: UIViewController {
     
     private let items = Variable<[CollectionModel]>((1...10).map { CollectionModel.init(logo: UIImage.init(named: "Jietu20171220")!, title: "\($0)", id: $0)})
     
-//    private let dataSource: RxCollectionViewSectionedReloadDataSource<SectionModel<String, CollectionModel>>?
-    
-    
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
     }
     
 }
 
 // MARK: - Private Method
-private extension CollectionExapmleViewController {
+private extension DetailViewController {
     private func setupUI() {
-        // navigationItem
         rightItemState.asObservable()
             .map { $0.barTitle }
-        .bind(to: editItem.rx.title)
-        .disposed(by: bag)
+            .bind(to: myEditItem.rx.title)
+            .disposed(by: bag)
         
-//        let editItem = UIBarButtonItem()
-        editItem.rx.tap.withLatestFrom(rightItemState.asObservable())
-        .map { $0.reversedValue }
-            .share(replay: 1)
-        .bind(to: rightItemState)
-        .disposed(by: bag)
+        myEditItem.rx.tap.withLatestFrom(rightItemState.asObservable())
+            .map { $0.reversedValue }
+            .bind(to: rightItemState)
+            .disposed(by: bag)
         
         // 数据源
         let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, CollectionModel>>(configureCell: { [unowned self] (dataSource, collectionView, indexPath, item) in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCellID", for: indexPath) as! IconCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCollectionViewCellID", for: indexPath) as! IconCollectionViewCell
             
-            cell.iconImageView.image = item.logo
-            cell.iconImageView.layer.cornerRadius = 8
-            cell.iconImageView.layer.masksToBounds = true
+            cell.iconIV.image = item.logo
             cell.titleLabel.text = item.title
+            
             if item.id == 0 {
                 cell.deleteBtn.isHidden = true
             } else {
                 cell.deleteBtn.rx.tap
                     .subscribe(onNext: {
-                        print(indexPath.row)
-//                        print("*****\(item.id)*****\(item.title)")
+                        print("*****indexPath.item: \(indexPath.item)")
+                        self.items.value.remove(at: indexPath.item)
                         
                     })
                     .disposed(by: cell.bag)
                 
                 self.rightItemState.asObservable()
                     .map { $0.isEditting }
-                .bind(to: cell.rx.isEditting)
-                .disposed(by: cell.bag)
+                    .bind(to: cell.rx.isEditting)
+                    .disposed(by: cell.bag)
             }
             
             return cell
         })
         
-        dataSource.moveItem = { [unowned self] dataSource, sourceIndexPath, destinationIndexPath in
+        dataSource.moveItem = { [unowned self] (dataSource, sourceIndexPath, destinationIndexPath) in
             var value = self.items.value
             let tmp = value.remove(at: sourceIndexPath.row)
             value.insert(tmp, at: destinationIndexPath.row)
@@ -126,71 +119,50 @@ private extension CollectionExapmleViewController {
             case .viewing:
                 return items + [CollectionModel.init(logo: UIImage.init(named: "btn_add")!, title: "Add", id: 0)]
             }
-        }
+            }
             .map { [SectionModel.init(model: "", items: $0)] }
-        .bind(to: myCollectionView.rx.items(dataSource: dataSource))
+            .bind(to: myCollectionView.rx.items(dataSource: dataSource))
+            .disposed(by: bag)
+        
+        myCollectionView.rx.modelSelected(CollectionModel.self)
+            .subscribe(onNext: { (model) in
+                if model.id == 0 {
+                    let nextID = (self.items.value.max(by: { $0.id < $1.id })?.id ?? 0) + 1
+                    self.items.value.append(CollectionModel(logo: UIImage(named: "Jietu20171220")!, title: "\(nextID)", id: nextID))
+                    return
+                }
+                
+                if self.rightItemState.value.isEditting { return }
+                DSProgressHUD.showMessage(title: nil, message: model.title)
+            })
         .disposed(by: bag)
         
-        // 长按手势
+        // 长按功能
         let longPress = UILongPressGestureRecognizer()
         longPress.rx.event
             .subscribe(onNext: { [unowned self] (gesture) in
                 switch gesture.state {
                 case .began:
                     guard let selectedIndexPath = self.myCollectionView.indexPathForItem(at: gesture.location(in: self.myCollectionView)) else {
-                        break
+                        return
                     }
                     self.rightItemState.value = .editting
-                    if #available(iOS 9.0, *) {
-                        self.myCollectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
-                    } else {
-                        // Fallback on earlier versions
-                        print("不支持 iOS9以下版本")
-                    }
-
+                    self.myCollectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+                    
                 case .changed:
-                    if #available(iOS 9.0, *) {
-                        self.myCollectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view))
-                    } else {
-                        // Fallback on earlier versions
-                        print("不支持 iOS9以下版本")
-                    }
-
+                    self.myCollectionView.updateInteractiveMovementTargetPosition(gesture.location(in: self.myCollectionView))
+                    
                 case .ended:
-                    if #available(iOS 9.0, *) {
-                        self.myCollectionView.endInteractiveMovement()
-                    } else {
-                        // Fallback on earlier versions
-                        print("不支持 iOS9以下版本")
-                    }
-
+                    self.myCollectionView.endInteractiveMovement()
+                    
                 case .cancelled, .failed, .possible:
-                    if #available(iOS 9.0, *) {
-                        self.myCollectionView.cancelInteractiveMovement()
-                    } else {
-                        // Fallback on earlier versions
-                        print("不支持 iOS9以下版本")
-                    }
+                    self.myCollectionView.cancelInteractiveMovement()
+                    
                 }
             })
         .disposed(by: bag)
-
         myCollectionView.addGestureRecognizer(longPress)
-
-        myCollectionView.rx.modelSelected(CollectionModel.self)
-            .subscribe(onNext: { (model) in
-                if model.id == 0 {
-                    let nextID = (self.items.value.max(by: { $0.id < $1.id })?.id ?? 0) + 1
-                    self.items.value.append(CollectionModel.init(logo: UIImage.init(named: "Jietu20171220")!, title: String(nextID), id: nextID))
-
-                    return
-                }
-
-                if self.rightItemState.value.isEditting { return }
-                DSProgressHUD.showMessage(title: nil, message: model.title)
-
-            })
-        .disposed(by: bag)
-        
     }
 }
+
+

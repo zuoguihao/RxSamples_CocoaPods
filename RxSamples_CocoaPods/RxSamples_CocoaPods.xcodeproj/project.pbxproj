@@ -10,6 +10,14 @@
 		310288A81FD68EA800FACDAF /* SelectPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */; };
 		310288AA1FD68F2A00FACDAF /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */; };
 		310288AC1FD6908400FACDAF /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310288AB1FD6908400FACDAF /* PaymentModel.swift */; };
+		311067511FF0EFC900E42E7B /* MultiplyCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311067501FF0EFC900E42E7B /* MultiplyCellTableViewController.swift */; };
+		311067531FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311067521FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift */; };
+		311067551FF0F10200E42E7B /* MultiplyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311067541FF0F10200E42E7B /* MultiplyCellModel.swift */; };
+		311067571FF0FDEE00E42E7B /* UIAlertView+DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311067561FF0FDEE00E42E7B /* UIAlertView+DS.swift */; };
+		3110675A1FF1040D00E42E7B /* InsideCellClickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311067591FF1040D00E42E7B /* InsideCellClickTableViewController.swift */; };
+		3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */; };
+		3110675E1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */; };
+		311067601FF10A5400E42E7B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */; };
 		3156E6E71FECF98A004C7708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3156E6E61FECF98A004C7708 /* AppDelegate.swift */; };
 		3156E6EC1FECF98B004C7708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3156E6EA1FECF98B004C7708 /* Main.storyboard */; };
 		3156E6EE1FECF98B004C7708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3156E6ED1FECF98B004C7708 /* Assets.xcassets */; };
@@ -95,6 +103,14 @@
 		310288A71FD68EA800FACDAF /* SelectPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPaymentViewController.swift; sourceTree = "<group>"; };
 		310288A91FD68F2A00FACDAF /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		310288AB1FD6908400FACDAF /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		311067501FF0EFC900E42E7B /* MultiplyCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyCellTableViewController.swift; sourceTree = "<group>"; };
+		311067521FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyCellTableViewCell.swift; sourceTree = "<group>"; };
+		311067541FF0F10200E42E7B /* MultiplyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyCellModel.swift; sourceTree = "<group>"; };
+		311067561FF0FDEE00E42E7B /* UIAlertView+DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertView+DS.swift"; sourceTree = "<group>"; };
+		311067591FF1040D00E42E7B /* InsideCellClickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickTableViewController.swift; sourceTree = "<group>"; };
+		3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickModel.swift; sourceTree = "<group>"; };
+		3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickTableViewCell.swift; sourceTree = "<group>"; };
+		3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3156E6E41FECF98A004C7708 /* DataSourceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSourceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3156E6E61FECF98A004C7708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3156E6EB1FECF98B004C7708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -241,6 +257,26 @@
 			path = Expand;
 			sourceTree = SOURCE_ROOT;
 		};
+		3110674F1FF0EF9B00E42E7B /* MultiplyCell */ = {
+			isa = PBXGroup;
+			children = (
+				311067501FF0EFC900E42E7B /* MultiplyCellTableViewController.swift */,
+				311067521FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift */,
+				311067541FF0F10200E42E7B /* MultiplyCellModel.swift */,
+			);
+			path = MultiplyCell;
+			sourceTree = "<group>";
+		};
+		311067581FF103FB00E42E7B /* InsideCellClick */ = {
+			isa = PBXGroup;
+			children = (
+				311067591FF1040D00E42E7B /* InsideCellClickTableViewController.swift */,
+				3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */,
+				3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */,
+			);
+			path = InsideCellClick;
+			sourceTree = "<group>";
+		};
 		3156E6E51FECF98A004C7708 /* DataSourceTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +287,8 @@
 				31DB959C1FF0AE56008D3A54 /* CustomCell */,
 				31CEA1D61FF0B48000CBC549 /* BasicSection */,
 				31CE13FD1FF0CD1F0065AF28 /* CustomSection */,
+				3110674F1FF0EF9B00E42E7B /* MultiplyCell */,
+				311067581FF103FB00E42E7B /* InsideCellClick */,
 				3156E6ED1FECF98B004C7708 /* Assets.xcassets */,
 				31E3F64B1FED0C1E00CE0E9D /* Extensions */,
 				3156E6EF1FECF98B004C7708 /* LaunchScreen.storyboard */,
@@ -464,6 +502,7 @@
 		31E3F64B1FED0C1E00CE0E9D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */,
 				31E3F64C1FED0C1E00CE0E9D /* Operators+Rx.swift */,
 				31E3F64D1FED0C1E00CE0E9D /* MBProgressHUD+DS.swift */,
 				31E3F64E1FED0C1E00CE0E9D /* UILabel+Rx.swift */,
@@ -472,6 +511,7 @@
 				31E3F6511FED0C1E00CE0E9D /* UIButton+Rx.swift */,
 				31E3F6521FED0C1E00CE0E9D /* AutoDeselect+Rx.swift */,
 				31E3F6531FED0C1E00CE0E9D /* UIControl+Rx.swift */,
+				311067561FF0FDEE00E42E7B /* UIAlertView+DS.swift */,
 			);
 			name = Extensions;
 			path = Expand/Extensions;
@@ -886,12 +926,19 @@
 				31E3F6481FED042200CE0E9D /* HomeTableViewController.swift in Sources */,
 				31B00A901FF0D0E000B2FFEB /* CustomSectionHeaderFooterView.swift in Sources */,
 				31E3F6461FED03FD00CE0E9D /* DetailViewController.swift in Sources */,
+				311067531FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift in Sources */,
+				3110675A1FF1040D00E42E7B /* InsideCellClickTableViewController.swift in Sources */,
 				31E3F6581FED0C1E00CE0E9D /* UIView+Rx.swift in Sources */,
 				31E3F65A1FED0C1E00CE0E9D /* AutoDeselect+Rx.swift in Sources */,
 				3156E6E71FECF98A004C7708 /* AppDelegate.swift in Sources */,
 				31E3F6551FED0C1E00CE0E9D /* MBProgressHUD+DS.swift in Sources */,
+				311067511FF0EFC900E42E7B /* MultiplyCellTableViewController.swift in Sources */,
 				31E3F6591FED0C1E00CE0E9D /* UIButton+Rx.swift in Sources */,
+				311067571FF0FDEE00E42E7B /* UIAlertView+DS.swift in Sources */,
+				3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */,
 				31E3F6441FED03D200CE0E9D /* IconCollectionViewCell.swift in Sources */,
+				311067551FF0F10200E42E7B /* MultiplyCellModel.swift in Sources */,
+				311067601FF10A5400E42E7B /* UIImage+Extension.swift in Sources */,
 				31CE14011FF0CD370065AF28 /* CustomSectionTableViewCell.swift in Sources */,
 				31DB95A01FF0AEA9008D3A54 /* CustomCellTableViewCell.swift in Sources */,
 				31E3F65B1FED0C1E00CE0E9D /* UIControl+Rx.swift in Sources */,
@@ -903,6 +950,7 @@
 				31E3F6571FED0C1E00CE0E9D /* UIColor+DS.swift in Sources */,
 				31DB959E1FF0AE65008D3A54 /* CustomCellTableViewController.swift in Sources */,
 				31E3F6541FED0C1E00CE0E9D /* Operators+Rx.swift in Sources */,
+				3110675E1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

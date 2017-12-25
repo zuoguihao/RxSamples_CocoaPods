@@ -90,7 +90,7 @@ private extension DetailViewController {
             } else {
                 cell.deleteBtn.rx.tap
                     .subscribe(onNext: {
-                        print("self.items: \(self.items.value)*****indexPath.item: \(indexPath.item), id: \(item.id)")
+//                        print("self.items: \(self.items.value)*****indexPath.item: \(indexPath.item), id: \(item.id)")
                         guard let index = self.items.value.index(of: item) else {
                             return
                         }

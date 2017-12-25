@@ -79,7 +79,7 @@ private extension DetailViewController {
             .disposed(by: bag)
         
         // 数据源
-        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, CollectionModel>>(configureCell: { [unowned self] (dataSource, collectionView, indexPath, item) in
+        let dataSource = RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, CollectionModel>>.init(configureCell: { [unowned self] (dataSource, collectionView, indexPath, item) in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCollectionViewCellID", for: indexPath) as! IconCollectionViewCell
             
             cell.iconIV.image = item.logo
@@ -90,8 +90,11 @@ private extension DetailViewController {
             } else {
                 cell.deleteBtn.rx.tap
                     .subscribe(onNext: {
-                        print("*****indexPath.item: \(indexPath.item)")
-                        self.items.value.remove(at: indexPath.item)
+                        print("self.items: \(self.items.value)*****indexPath.item: \(indexPath.item), id: \(item.id)")
+                        guard let index = self.items.value.index(of: item) else {
+                            return
+                        }
+                        self.items.value.remove(at: index.hashValue)
                         
                     })
                     .disposed(by: cell.bag)
@@ -103,6 +106,8 @@ private extension DetailViewController {
             }
             
             return cell
+            }, configureSupplementaryView: { (source, collectionView, str, indexPath) -> UICollectionReusableView in
+                return collectionView.dequeueReusableCell(withReuseIdentifier: "IconCollectionViewCellID", for: indexPath) as! IconCollectionViewCell
         })
         
         dataSource.moveItem = { [unowned self] (dataSource, sourceIndexPath, destinationIndexPath) in
@@ -120,7 +125,7 @@ private extension DetailViewController {
                 return items + [CollectionModel.init(logo: UIImage.init(named: "btn_add")!, title: "Add", id: 0)]
             }
             }
-            .map { [SectionModel.init(model: "", items: $0)] }
+            .map { [AnimatableSectionModel.init(model: "", items: $0)] }
             .bind(to: myCollectionView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
         

@@ -17,5 +17,6 @@ targetTetsArray.each do |t|
         pod 'SnapKit'
         #pod 'RandomKit'
         pod "QBImagePickerController"
+        pod 'MJRefresh'
     end
 end

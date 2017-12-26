@@ -18,6 +18,9 @@
 		3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */; };
 		3110675E1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */; };
 		311067601FF10A5400E42E7B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */; };
+		31444DEF1FF1E06B0071884E /* RefreshTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DEE1FF1E06B0071884E /* RefreshTableViewCell.swift */; };
+		31444DF11FF1E0760071884E /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DF01FF1E0760071884E /* RefreshModel.swift */; };
+		31444DF31FF1E3580071884E /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DF21FF1E3580071884E /* RefreshViewController.swift */; };
 		3156E6E71FECF98A004C7708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3156E6E61FECF98A004C7708 /* AppDelegate.swift */; };
 		3156E6EC1FECF98B004C7708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3156E6EA1FECF98B004C7708 /* Main.storyboard */; };
 		3156E6EE1FECF98B004C7708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3156E6ED1FECF98B004C7708 /* Assets.xcassets */; };
@@ -111,6 +114,9 @@
 		3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickModel.swift; sourceTree = "<group>"; };
 		3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickTableViewCell.swift; sourceTree = "<group>"; };
 		3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		31444DEE1FF1E06B0071884E /* RefreshTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTableViewCell.swift; sourceTree = "<group>"; };
+		31444DF01FF1E0760071884E /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
+		31444DF21FF1E3580071884E /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
 		3156E6E41FECF98A004C7708 /* DataSourceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataSourceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3156E6E61FECF98A004C7708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3156E6EB1FECF98B004C7708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		31628FC31FD9270B001E1F63 /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
 		31628FC41FD9270B001E1F63 /* AutoDeselect+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AutoDeselect+Rx.swift"; sourceTree = "<group>"; };
 		31628FC51FD9270B001E1F63 /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
+		318963001FF1E91C00E1152A /* DataSourceTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataSourceTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		318B3C6E1FD7824900428ADF /* PushSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSettingViewController.swift; sourceTree = "<group>"; };
 		318B3C701FD7828F00428ADF /* SelectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewCell.swift; sourceTree = "<group>"; };
 		318B3C721FD7843D00428ADF /* SelectTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -277,6 +284,16 @@
 			path = InsideCellClick;
 			sourceTree = "<group>";
 		};
+		31444DEB1FF1E0440071884E /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				31444DF21FF1E3580071884E /* RefreshViewController.swift */,
+				31444DEE1FF1E06B0071884E /* RefreshTableViewCell.swift */,
+				31444DF01FF1E0760071884E /* RefreshModel.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 		3156E6E51FECF98A004C7708 /* DataSourceTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,10 +306,12 @@
 				31CE13FD1FF0CD1F0065AF28 /* CustomSection */,
 				3110674F1FF0EF9B00E42E7B /* MultiplyCell */,
 				311067581FF103FB00E42E7B /* InsideCellClick */,
+				31444DEB1FF1E0440071884E /* Refresh */,
 				3156E6ED1FECF98B004C7708 /* Assets.xcassets */,
 				31E3F64B1FED0C1E00CE0E9D /* Extensions */,
 				3156E6EF1FECF98B004C7708 /* LaunchScreen.storyboard */,
 				3156E6F21FECF98B004C7708 /* Info.plist */,
+				318963001FF1E91C00E1152A /* DataSourceTest-Bridging-Header.h */,
 			);
 			path = DataSourceTest;
 			sourceTree = "<group>";
@@ -632,6 +651,7 @@
 				TargetAttributes = {
 					3156E6E31FECF98A004C7708 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					318C39381FD7FBAF004736A1 = {
@@ -725,6 +745,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -737,6 +758,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -777,6 +799,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -789,6 +812,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -877,6 +901,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -889,6 +914,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -927,6 +953,7 @@
 				31B00A901FF0D0E000B2FFEB /* CustomSectionHeaderFooterView.swift in Sources */,
 				31E3F6461FED03FD00CE0E9D /* DetailViewController.swift in Sources */,
 				311067531FF0F06C00E42E7B /* MultiplyCellTableViewCell.swift in Sources */,
+				31444DF31FF1E3580071884E /* RefreshViewController.swift in Sources */,
 				3110675A1FF1040D00E42E7B /* InsideCellClickTableViewController.swift in Sources */,
 				31E3F6581FED0C1E00CE0E9D /* UIView+Rx.swift in Sources */,
 				31E3F65A1FED0C1E00CE0E9D /* AutoDeselect+Rx.swift in Sources */,
@@ -934,6 +961,7 @@
 				31E3F6551FED0C1E00CE0E9D /* MBProgressHUD+DS.swift in Sources */,
 				311067511FF0EFC900E42E7B /* MultiplyCellTableViewController.swift in Sources */,
 				31E3F6591FED0C1E00CE0E9D /* UIButton+Rx.swift in Sources */,
+				31444DF11FF1E0760071884E /* RefreshModel.swift in Sources */,
 				311067571FF0FDEE00E42E7B /* UIAlertView+DS.swift in Sources */,
 				3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */,
 				31E3F6441FED03D200CE0E9D /* IconCollectionViewCell.swift in Sources */,
@@ -947,6 +975,7 @@
 				31CE13FF1FF0CD2B0065AF28 /* CustomSectionTableViewController.swift in Sources */,
 				31CEA1D81FF0B49500CBC549 /* BasicSectionTableViewController.swift in Sources */,
 				31DB95A21FF0AF64008D3A54 /* CustomCellModel.swift in Sources */,
+				31444DEF1FF1E06B0071884E /* RefreshTableViewCell.swift in Sources */,
 				31E3F6571FED0C1E00CE0E9D /* UIColor+DS.swift in Sources */,
 				31DB959E1FF0AE65008D3A54 /* CustomCellTableViewController.swift in Sources */,
 				31E3F6541FED0C1E00CE0E9D /* Operators+Rx.swift in Sources */,
@@ -1093,6 +1122,7 @@
 			baseConfigurationReference = 07ABEC58CF8BAA7708ED8FE9 /* Pods-DataSourceTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CT8FYEK5B;
 				INFOPLIST_FILE = DataSourceTest/Info.plist;
@@ -1100,6 +1130,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qtds8810.DataSourceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataSourceTest/DataSourceTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1110,6 +1142,7 @@
 			baseConfigurationReference = BF6A73676C1F68A548C2A9B5 /* Pods-DataSourceTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CT8FYEK5B;
 				INFOPLIST_FILE = DataSourceTest/Info.plist;
@@ -1117,6 +1150,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qtds8810.DataSourceTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataSourceTest/DataSourceTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

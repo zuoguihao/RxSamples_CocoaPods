@@ -18,6 +18,12 @@
 		3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */; };
 		3110675E1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */; };
 		311067601FF10A5400E42E7B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */; };
+		311862271FF249D400BDC715 /* FoldableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311862261FF249D400BDC715 /* FoldableViewController.swift */; };
+		311862291FF24BA100BDC715 /* FoldableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311862281FF24BA100BDC715 /* FoldableModel.swift */; };
+		312B63711FF33D3A00A02A2E /* Foldable_FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B63701FF33D3900A02A2E /* Foldable_FieldTableViewCell.swift */; };
+		312B63731FF3409F00A02A2E /* Foldable_DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B63721FF3409F00A02A2E /* Foldable_DatePickerTableViewCell.swift */; };
+		312B63751FF34E2F00A02A2E /* Foldable_SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B63741FF34E2F00A02A2E /* Foldable_SliderTableViewCell.swift */; };
+		312B63771FF352E700A02A2E /* Foldable_SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B63761FF352E700A02A2E /* Foldable_SwitchTableViewCell.swift */; };
 		31444DEF1FF1E06B0071884E /* RefreshTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DEE1FF1E06B0071884E /* RefreshTableViewCell.swift */; };
 		31444DF11FF1E0760071884E /* RefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DF01FF1E0760071884E /* RefreshModel.swift */; };
 		31444DF31FF1E3580071884E /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31444DF21FF1E3580071884E /* RefreshViewController.swift */; };
@@ -114,6 +120,12 @@
 		3110675B1FF1051500E42E7B /* InsideCellClickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickModel.swift; sourceTree = "<group>"; };
 		3110675D1FF105EE00E42E7B /* InsideCellClickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideCellClickTableViewCell.swift; sourceTree = "<group>"; };
 		3110675F1FF10A5400E42E7B /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		311862261FF249D400BDC715 /* FoldableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldableViewController.swift; sourceTree = "<group>"; };
+		311862281FF24BA100BDC715 /* FoldableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldableModel.swift; sourceTree = "<group>"; };
+		312B63701FF33D3900A02A2E /* Foldable_FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foldable_FieldTableViewCell.swift; sourceTree = "<group>"; };
+		312B63721FF3409F00A02A2E /* Foldable_DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foldable_DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		312B63741FF34E2F00A02A2E /* Foldable_SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foldable_SliderTableViewCell.swift; sourceTree = "<group>"; };
+		312B63761FF352E700A02A2E /* Foldable_SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foldable_SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		31444DEE1FF1E06B0071884E /* RefreshTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTableViewCell.swift; sourceTree = "<group>"; };
 		31444DF01FF1E0760071884E /* RefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshModel.swift; sourceTree = "<group>"; };
 		31444DF21FF1E3580071884E /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +296,19 @@
 			path = InsideCellClick;
 			sourceTree = "<group>";
 		};
+		311862251FF249C500BDC715 /* Foldable */ = {
+			isa = PBXGroup;
+			children = (
+				311862261FF249D400BDC715 /* FoldableViewController.swift */,
+				311862281FF24BA100BDC715 /* FoldableModel.swift */,
+				312B63701FF33D3900A02A2E /* Foldable_FieldTableViewCell.swift */,
+				312B63721FF3409F00A02A2E /* Foldable_DatePickerTableViewCell.swift */,
+				312B63741FF34E2F00A02A2E /* Foldable_SliderTableViewCell.swift */,
+				312B63761FF352E700A02A2E /* Foldable_SwitchTableViewCell.swift */,
+			);
+			path = Foldable;
+			sourceTree = "<group>";
+		};
 		31444DEB1FF1E0440071884E /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +332,7 @@
 				3110674F1FF0EF9B00E42E7B /* MultiplyCell */,
 				311067581FF103FB00E42E7B /* InsideCellClick */,
 				31444DEB1FF1E0440071884E /* Refresh */,
+				311862251FF249C500BDC715 /* Foldable */,
 				3156E6ED1FECF98B004C7708 /* Assets.xcassets */,
 				31E3F64B1FED0C1E00CE0E9D /* Extensions */,
 				3156E6EF1FECF98B004C7708 /* LaunchScreen.storyboard */,
@@ -959,15 +985,21 @@
 				31E3F65A1FED0C1E00CE0E9D /* AutoDeselect+Rx.swift in Sources */,
 				3156E6E71FECF98A004C7708 /* AppDelegate.swift in Sources */,
 				31E3F6551FED0C1E00CE0E9D /* MBProgressHUD+DS.swift in Sources */,
+				311862291FF24BA100BDC715 /* FoldableModel.swift in Sources */,
+				312B63751FF34E2F00A02A2E /* Foldable_SliderTableViewCell.swift in Sources */,
+				312B63711FF33D3A00A02A2E /* Foldable_FieldTableViewCell.swift in Sources */,
 				311067511FF0EFC900E42E7B /* MultiplyCellTableViewController.swift in Sources */,
 				31E3F6591FED0C1E00CE0E9D /* UIButton+Rx.swift in Sources */,
 				31444DF11FF1E0760071884E /* RefreshModel.swift in Sources */,
 				311067571FF0FDEE00E42E7B /* UIAlertView+DS.swift in Sources */,
 				3110675C1FF1051500E42E7B /* InsideCellClickModel.swift in Sources */,
+				311862271FF249D400BDC715 /* FoldableViewController.swift in Sources */,
 				31E3F6441FED03D200CE0E9D /* IconCollectionViewCell.swift in Sources */,
 				311067551FF0F10200E42E7B /* MultiplyCellModel.swift in Sources */,
 				311067601FF10A5400E42E7B /* UIImage+Extension.swift in Sources */,
+				312B63771FF352E700A02A2E /* Foldable_SwitchTableViewCell.swift in Sources */,
 				31CE14011FF0CD370065AF28 /* CustomSectionTableViewCell.swift in Sources */,
+				312B63731FF3409F00A02A2E /* Foldable_DatePickerTableViewCell.swift in Sources */,
 				31DB95A01FF0AEA9008D3A54 /* CustomCellTableViewCell.swift in Sources */,
 				31E3F65B1FED0C1E00CE0E9D /* UIControl+Rx.swift in Sources */,
 				31E3F64A1FED04E300CE0E9D /* CollectionModel.swift in Sources */,
